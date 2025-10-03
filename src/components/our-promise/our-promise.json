@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_our_promise_our_promises",
+  "info": {
+    "displayName": "Our Promise"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "component",
+      "component": "cta.cta",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

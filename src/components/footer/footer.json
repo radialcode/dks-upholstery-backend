@@ -1,0 +1,61 @@
+{
+  "collectionName": "components_footer_footers",
+  "info": {
+    "displayName": "Footer"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "navigation": {
+      "type": "component",
+      "component": "select.select",
+      "repeatable": true
+    },
+    "recentWork": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "serviceCategories": {
+      "type": "component",
+      "component": "select.select",
+      "repeatable": true
+    },
+    "socials": {
+      "type": "component",
+      "component": "social.socials",
+      "repeatable": true
+    },
+    "socialUrls": {
+      "type": "component",
+      "component": "social-links.social-links",
+      "repeatable": true
+    },
+    "copyrightText": {
+      "type": "text"
+    },
+    "ourPromise": {
+      "type": "component",
+      "component": "our-promise.our-promise",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

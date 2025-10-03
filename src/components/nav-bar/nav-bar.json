@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_nav_bar_nav_bars",
+  "info": {
+    "displayName": "Nav Bar"
+  },
+  "options": {},
+  "attributes": {
+    "Logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "navigationList": {
+      "type": "component",
+      "component": "list.list",
+      "repeatable": true
+    },
+    "Cta": {
+      "type": "component",
+      "component": "cta.cta",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
