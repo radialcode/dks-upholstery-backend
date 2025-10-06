@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_testimonial_card_testimonial_cards",
+  "info": {
+    "displayName": "TestimonialCard"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "quote": {
+      "type": "text",
+      "required": true
+    },
+    "profileImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "rating": {
+      "type": "string",
+      "default": "1",
+      "minLength": 1,
+      "maxLength": 5,
+      "required": true
+    }
+  },
+  "config": {}
+}

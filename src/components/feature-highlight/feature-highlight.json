@@ -1,15 +1,14 @@
 {
-  "collectionName": "components_cta_ctas",
+  "collectionName": "components_feature_highlight_feature_highlights",
   "info": {
-    "displayName": "Cta"
+    "displayName": "Feature Highlight"
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
-    "url": {
+    "description": {
       "type": "string"
     },
     "icon": {
