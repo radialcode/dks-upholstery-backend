@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_real_transformations_real_transformations",
+  "info": {
+    "displayName": "Real Transformations"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "reviewSlider": {
+      "type": "component",
+      "component": "transformations-card.transformations-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_faq_faqs",
+  "info": {
+    "displayName": "Faqs"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "faqList": {
+      "type": "component",
+      "component": "faq-card.faq-card",
+      "repeatable": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "cta.cta",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

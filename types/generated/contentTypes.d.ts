@@ -471,6 +471,7 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    aboutUs: Schema.Attribute.Component<'about-us.about-us', false>;
     beforeAndAfterDifference: Schema.Attribute.Component<
       'before-and-after.before-and-after',
       false
@@ -478,7 +479,9 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    faqs: Schema.Attribute.Component<'faq.faqs', false>;
     hero: Schema.Attribute.Component<'hero.hero', false>;
+    howItWorks: Schema.Attribute.Component<'how-it-works.how-it-works', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -487,7 +490,40 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     ourService: Schema.Attribute.Component<'our-service.our-services', false>;
     publishedAt: Schema.Attribute.DateTime;
+    realTransformation: Schema.Attribute.Component<
+      'real-transformations.real-transformations',
+      false
+    >;
     testimonials: Schema.Attribute.Component<'testimonial.testimonial', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSocialIconSocialIcon extends Struct.CollectionTypeSchema {
+  collectionName: 'social_icons';
+  info: {
+    displayName: 'Social Icon';
+    pluralName: 'social-icons';
+    singularName: 'social-icon';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::social-icon.social-icon'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1006,6 +1042,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::global.global': ApiGlobalGlobal;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::social-icon.social-icon': ApiSocialIconSocialIcon;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

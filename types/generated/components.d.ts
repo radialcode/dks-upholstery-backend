@@ -1,5 +1,24 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AboutUsAboutUs extends Struct.ComponentSchema {
+  collectionName: 'components_about_us_about_uses';
+  info: {
+    displayName: 'About Us';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta.cta', false>;
+    description: Schema.Attribute.Text;
+    infoList: Schema.Attribute.Component<'select.select', true>;
+    leftSideImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    rightSideImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BeforeAndAfterBeforeAndAfter extends Struct.ComponentSchema {
   collectionName: 'components_before_and_after_before_and_afters';
   info: {
@@ -41,6 +60,29 @@ export interface DifferenceCarouselDifferenceCarousel
     beforeImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+  };
+}
+
+export interface FaqCardFaqCard extends Struct.ComponentSchema {
+  collectionName: 'components_faq_card_faq_cards';
+  info: {
+    displayName: 'Faq Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    question: Schema.Attribute.String;
+  };
+}
+
+export interface FaqFaqs extends Struct.ComponentSchema {
+  collectionName: 'components_faq_faqs';
+  info: {
+    displayName: 'Faqs';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta.cta', false>;
+    faqList: Schema.Attribute.Component<'faq-card.faq-card', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -103,6 +145,45 @@ export interface HeroHero extends Struct.ComponentSchema {
   };
 }
 
+export interface HowItWorkCardHowItWorkCard extends Struct.ComponentSchema {
+  collectionName: 'components_how_it_work_card_how_it_work_cards';
+  info: {
+    displayName: 'How It Work Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HowItWorksHowItWorks extends Struct.ComponentSchema {
+  collectionName: 'components_how_it_works_how_it_works';
+  info: {
+    displayName: 'How It Works';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta.cta', false>;
+    description: Schema.Attribute.Text;
+    steps: Schema.Attribute.Component<
+      'how-it-work-card.how-it-work-card',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface IconsListIconsList extends Struct.ComponentSchema {
+  collectionName: 'components_icons_list_icons_lists';
+  info: {
+    displayName: 'Icons List';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ListList extends Struct.ComponentSchema {
   collectionName: 'components_list_lists';
   info: {
@@ -157,6 +238,53 @@ export interface OurServiceOurServices extends Struct.ComponentSchema {
   };
 }
 
+export interface PickOurServicesPickOurServices extends Struct.ComponentSchema {
+  collectionName: 'components_pick_our_services_pick_our_services';
+  info: {
+    displayName: 'Pick Our Services';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta.cta', false>;
+    description: Schema.Attribute.Text;
+    slider: Schema.Attribute.Component<
+      'pick-service-card.pick-services-card',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PickServiceCardPickServicesCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_pick_service_card_pick_services_cards';
+  info: {
+    displayName: 'Pick Services Card';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta.cta', false>;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface RealTransformationsRealTransformations
+  extends Struct.ComponentSchema {
+  collectionName: 'components_real_transformations_real_transformations';
+  info: {
+    displayName: 'Real Transformations';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    reviewSlider: Schema.Attribute.Component<
+      'transformations-card.transformations-card',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ReviewHeroReviewHero extends Struct.ComponentSchema {
   collectionName: 'components_review_hero_review_heroes';
   info: {
@@ -177,7 +305,7 @@ export interface SelectSelect extends Struct.ComponentSchema {
   };
   attributes: {
     title: Schema.Attribute.String;
-    url: Schema.Attribute.String;
+    value: Schema.Attribute.String;
   };
 }
 
@@ -242,25 +370,53 @@ export interface TestimonialTestimonial extends Struct.ComponentSchema {
   };
 }
 
+export interface TransformationsCardTransformationsCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_transformations_card_transformations_cards';
+  info: {
+    displayName: 'Transformations Card';
+  };
+  attributes: {
+    authorName: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    quote: Schema.Attribute.Text;
+    social_icon: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::social-icon.social-icon'
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'about-us.about-us': AboutUsAboutUs;
       'before-and-after.before-and-after': BeforeAndAfterBeforeAndAfter;
       'cta.cta': CtaCta;
       'difference-carousel.difference-carousel': DifferenceCarouselDifferenceCarousel;
+      'faq-card.faq-card': FaqCardFaqCard;
+      'faq.faqs': FaqFaqs;
       'feature-highlight.feature-highlight': FeatureHighlightFeatureHighlight;
       'footer.footer': FooterFooter;
       'hero.hero': HeroHero;
+      'how-it-work-card.how-it-work-card': HowItWorkCardHowItWorkCard;
+      'how-it-works.how-it-works': HowItWorksHowItWorks;
+      'icons-list.icons-list': IconsListIconsList;
       'list.list': ListList;
       'nav-bar.nav-bar': NavBarNavBar;
       'our-promise.our-promise': OurPromiseOurPromise;
       'our-service.our-services': OurServiceOurServices;
+      'pick-our-services.pick-our-services': PickOurServicesPickOurServices;
+      'pick-service-card.pick-services-card': PickServiceCardPickServicesCard;
+      'real-transformations.real-transformations': RealTransformationsRealTransformations;
       'review-hero.review-hero': ReviewHeroReviewHero;
       'select.select': SelectSelect;
       'social-links.social-links': SocialLinksSocialLinks;
       'social.socials': SocialSocials;
       'testimonial-card.testimonial-card': TestimonialCardTestimonialCard;
       'testimonial.testimonial': TestimonialTestimonial;
+      'transformations-card.transformations-card': TransformationsCardTransformationsCard;
     }
   }
 }
