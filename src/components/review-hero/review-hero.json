@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_cta_ctas",
+  "collectionName": "components_review_hero_review_heroes",
   "info": {
-    "displayName": "Cta"
+    "displayName": "Review Hero"
   },
   "options": {},
   "attributes": {
@@ -9,18 +9,20 @@
       "type": "string",
       "required": true
     },
-    "url": {
-      "type": "string"
-    },
     "icon": {
       "type": "media",
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ]
+    },
+    "rating": {
+      "type": "string",
+      "required": true
     }
   },
   "config": {}

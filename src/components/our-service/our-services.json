@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_our_service_our_services",
+  "info": {
+    "displayName": "Our Services"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "TrustedCompany": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "featureHighlight": {
+      "type": "component",
+      "component": "feature-highlight.feature-highlight",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
