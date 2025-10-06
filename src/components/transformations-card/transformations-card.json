@@ -8,6 +8,7 @@
     "image": {
       "type": "media",
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -16,13 +17,16 @@
       ]
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "quote": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "authorName": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "social_icon": {
       "type": "relation",

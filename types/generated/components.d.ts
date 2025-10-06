@@ -7,15 +7,16 @@ export interface AboutUsAboutUs extends Struct.ComponentSchema {
   };
   attributes: {
     cta: Schema.Attribute.Component<'cta.cta', false>;
-    description: Schema.Attribute.Text;
     infoList: Schema.Attribute.Component<'select.select', true>;
     leftSideImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
-    >;
+    > &
+      Schema.Attribute.Required;
     rightSideImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
-    >;
-    title: Schema.Attribute.String;
+    > &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -26,12 +27,12 @@ export interface BeforeAndAfterBeforeAndAfter extends Struct.ComponentSchema {
   };
   attributes: {
     cta: Schema.Attribute.Component<'cta.cta', false>;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     differenceSlider: Schema.Attribute.Component<
       'difference-carousel.difference-carousel',
       true
     >;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -56,10 +57,28 @@ export interface DifferenceCarouselDifferenceCarousel
   attributes: {
     afterImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
-    >;
+    > &
+      Schema.Attribute.Required;
     beforeImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface FabricsAndTipsFabricsAndTips extends Struct.ComponentSchema {
+  collectionName: 'components_fabrics_and_tips_fabrics_and_tips';
+  info: {
+    displayName: 'Fabrics And Tips';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta.cta', false>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    tipsList: Schema.Attribute.Component<
+      'pick-service-card.pick-services-card',
+      true
     >;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -69,8 +88,8 @@ export interface FaqCardFaqCard extends Struct.ComponentSchema {
     displayName: 'Faq Card';
   };
   attributes: {
-    description: Schema.Attribute.Text;
-    question: Schema.Attribute.String;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    question: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -131,17 +150,20 @@ export interface HeroHero extends Struct.ComponentSchema {
   attributes: {
     afterImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
-    >;
+    > &
+      Schema.Attribute.Required;
     beforeImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
-    >;
+    > &
+      Schema.Attribute.Required;
     cta: Schema.Attribute.Component<'cta.cta', false>;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     review: Schema.Attribute.Component<'review-hero.review-hero', false>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     warrantyBadge: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
-    >;
+    > &
+      Schema.Attribute.Required;
   };
 }
 
@@ -151,9 +173,10 @@ export interface HowItWorkCardHowItWorkCard extends Struct.ComponentSchema {
     displayName: 'How It Work Card';
   };
   attributes: {
-    description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    title: Schema.Attribute.String;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -164,12 +187,12 @@ export interface HowItWorksHowItWorks extends Struct.ComponentSchema {
   };
   attributes: {
     cta: Schema.Attribute.Component<'cta.cta', false>;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     steps: Schema.Attribute.Component<
       'how-it-work-card.how-it-work-card',
       true
     >;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -230,11 +253,12 @@ export interface OurServiceOurServices extends Struct.ComponentSchema {
       'feature-highlight.feature-highlight',
       true
     >;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     TrustedCompany: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
-    >;
+    > &
+      Schema.Attribute.Required;
   };
 }
 
@@ -262,7 +286,7 @@ export interface PickServiceCardPickServicesCard
   };
   attributes: {
     cta: Schema.Attribute.Component<'cta.cta', false>;
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
@@ -276,12 +300,12 @@ export interface RealTransformationsRealTransformations
     displayName: 'Real Transformations';
   };
   attributes: {
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     reviewSlider: Schema.Attribute.Component<
       'transformations-card.transformations-card',
       true
     >;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -304,8 +328,8 @@ export interface SelectSelect extends Struct.ComponentSchema {
     displayName: 'select';
   };
   attributes: {
-    title: Schema.Attribute.String;
-    value: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    value: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -352,6 +376,10 @@ export interface TestimonialCardTestimonialCard extends Struct.ComponentSchema {
       }> &
       Schema.Attribute.DefaultTo<'1'>;
     role: Schema.Attribute.String & Schema.Attribute.Required;
+    social_icon: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::social-icon.social-icon'
+    >;
   };
 }
 
@@ -361,12 +389,12 @@ export interface TestimonialTestimonial extends Struct.ComponentSchema {
     displayName: 'Testimonial';
   };
   attributes: {
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     testimonials: Schema.Attribute.Component<
       'testimonial-card.testimonial-card',
       true
     >;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -377,14 +405,15 @@ export interface TransformationsCardTransformationsCard
     displayName: 'Transformations Card';
   };
   attributes: {
-    authorName: Schema.Attribute.String;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    quote: Schema.Attribute.Text;
+    authorName: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    quote: Schema.Attribute.Text & Schema.Attribute.Required;
     social_icon: Schema.Attribute.Relation<
       'oneToOne',
       'api::social-icon.social-icon'
     >;
-    title: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -395,6 +424,7 @@ declare module '@strapi/strapi' {
       'before-and-after.before-and-after': BeforeAndAfterBeforeAndAfter;
       'cta.cta': CtaCta;
       'difference-carousel.difference-carousel': DifferenceCarouselDifferenceCarousel;
+      'fabrics-and-tips.fabrics-and-tips': FabricsAndTipsFabricsAndTips;
       'faq-card.faq-card': FaqCardFaqCard;
       'faq.faqs': FaqFaqs;
       'feature-highlight.feature-highlight': FeatureHighlightFeatureHighlight;

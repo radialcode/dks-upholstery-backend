@@ -6,10 +6,8 @@
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text"
+      "type": "string",
+      "required": true
     },
     "infoList": {
       "type": "component",
@@ -24,6 +22,7 @@
     "leftSideImage": {
       "type": "media",
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -34,6 +33,7 @@
     "rightSideImage": {
       "type": "media",
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",

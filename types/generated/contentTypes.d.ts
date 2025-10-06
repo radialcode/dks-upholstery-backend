@@ -479,6 +479,10 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    fabricsAndTips: Schema.Attribute.Component<
+      'fabrics-and-tips.fabrics-and-tips',
+      false
+    >;
     faqs: Schema.Attribute.Component<'faq.faqs', false>;
     hero: Schema.Attribute.Component<'hero.hero', false>;
     howItWorks: Schema.Attribute.Component<'how-it-works.how-it-works', false>;

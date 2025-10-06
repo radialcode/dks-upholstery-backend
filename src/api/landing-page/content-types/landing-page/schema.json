@@ -50,6 +50,11 @@
       "type": "component",
       "component": "faq.faqs",
       "repeatable": false
+    },
+    "fabricsAndTips": {
+      "type": "component",
+      "component": "fabrics-and-tips.fabrics-and-tips",
+      "repeatable": false
     }
   }
 }

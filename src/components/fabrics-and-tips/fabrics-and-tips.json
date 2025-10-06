@@ -1,21 +1,10 @@
 {
-  "collectionName": "components_pick_service_card_pick_services_cards",
+  "collectionName": "components_fabrics_and_tips_fabrics_and_tips",
   "info": {
-    "displayName": "Pick Services Card"
+    "displayName": "Fabrics And Tips"
   },
   "options": {},
   "attributes": {
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "title": {
       "type": "string",
       "required": true
@@ -23,6 +12,11 @@
     "description": {
       "type": "text",
       "required": true
+    },
+    "tipsList": {
+      "type": "component",
+      "component": "pick-service-card.pick-services-card",
+      "repeatable": true
     },
     "cta": {
       "type": "component",
