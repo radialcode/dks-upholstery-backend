@@ -20,6 +20,11 @@
       "type": "component",
       "component": "footer.footer",
       "repeatable": false
+    },
+    "ourPromise": {
+      "type": "component",
+      "component": "our-promise.our-promise",
+      "repeatable": false
     }
   }
 }

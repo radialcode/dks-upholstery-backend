@@ -452,6 +452,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     navigation: Schema.Attribute.Component<'nav-bar.nav-bar', false>;
+    ourPromise: Schema.Attribute.Component<'our-promise.our-promise', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

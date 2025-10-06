@@ -21,13 +21,16 @@ export interface FooterFooter extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     navigation: Schema.Attribute.Component<'select.select', true>;
-    ourPromise: Schema.Attribute.Component<'our-promise.our-promise', false>;
     recentWork: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
     serviceCategories: Schema.Attribute.Component<'select.select', true>;
+    socialLogo: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     socials: Schema.Attribute.Component<'social.socials', true>;
+    socialTitle: Schema.Attribute.String;
     socialUrls: Schema.Attribute.Component<'social-links.social-links', true>;
   };
 }
@@ -38,7 +41,7 @@ export interface ListList extends Struct.ComponentSchema {
     displayName: 'List';
   };
   attributes: {
-    Select: Schema.Attribute.Component<'select.select', true>;
+    select: Schema.Attribute.Component<'select.select', true>;
     title: Schema.Attribute.String;
     url: Schema.Attribute.String;
   };
@@ -71,7 +74,7 @@ export interface OurPromiseOurPromise extends Struct.ComponentSchema {
 export interface SelectSelect extends Struct.ComponentSchema {
   collectionName: 'components_select_selects';
   info: {
-    displayName: 'Select';
+    displayName: 'select';
   };
   attributes: {
     title: Schema.Attribute.String;

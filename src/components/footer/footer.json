@@ -51,10 +51,18 @@
     "copyrightText": {
       "type": "text"
     },
-    "ourPromise": {
-      "type": "component",
-      "component": "our-promise.our-promise",
-      "repeatable": false
+    "socialTitle": {
+      "type": "string"
+    },
+    "socialLogo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   },
   "config": {}

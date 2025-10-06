@@ -11,7 +11,7 @@
     "url": {
       "type": "string"
     },
-    "Select": {
+    "select": {
       "type": "component",
       "component": "select.select",
       "repeatable": true
