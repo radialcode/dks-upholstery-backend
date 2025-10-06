@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "Logo": {
+    "logo": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -20,7 +20,7 @@
       "component": "list.list",
       "repeatable": true
     },
-    "Cta": {
+    "cta": {
       "type": "component",
       "component": "cta.cta",
       "repeatable": false

@@ -50,8 +50,8 @@ export interface NavBarNavBar extends Struct.ComponentSchema {
     displayName: 'Nav Bar';
   };
   attributes: {
-    Cta: Schema.Attribute.Component<'cta.cta', false>;
-    Logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    cta: Schema.Attribute.Component<'cta.cta', false>;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     navigationList: Schema.Attribute.Component<'list.list', true>;
   };
 }

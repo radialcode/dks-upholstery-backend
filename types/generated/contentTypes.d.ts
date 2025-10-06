@@ -444,14 +444,14 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Footer: Schema.Attribute.Component<'footer.footer', false>;
+    footer: Schema.Attribute.Component<'footer.footer', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::global.global'
     > &
       Schema.Attribute.Private;
-    Navigation: Schema.Attribute.Component<'nav-bar.nav-bar', false>;
+    navigation: Schema.Attribute.Component<'nav-bar.nav-bar', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
