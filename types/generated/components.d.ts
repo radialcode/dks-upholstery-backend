@@ -1,5 +1,21 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BeforeAndAfterBeforeAndAfter extends Struct.ComponentSchema {
+  collectionName: 'components_before_and_after_before_and_afters';
+  info: {
+    displayName: 'Before And After';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta.cta', false>;
+    description: Schema.Attribute.Text;
+    differenceSlider: Schema.Attribute.Component<
+      'difference-carousel.difference-carousel',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface CtaCta extends Struct.ComponentSchema {
   collectionName: 'components_cta_ctas';
   info: {
@@ -9,6 +25,22 @@ export interface CtaCta extends Struct.ComponentSchema {
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     url: Schema.Attribute.String;
+  };
+}
+
+export interface DifferenceCarouselDifferenceCarousel
+  extends Struct.ComponentSchema {
+  collectionName: 'components_difference_carousel_difference_carousels';
+  info: {
+    displayName: 'Difference Carousel';
+  };
+  attributes: {
+    afterImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    beforeImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
   };
 }
 
@@ -213,7 +245,9 @@ export interface TestimonialTestimonial extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'before-and-after.before-and-after': BeforeAndAfterBeforeAndAfter;
       'cta.cta': CtaCta;
+      'difference-carousel.difference-carousel': DifferenceCarouselDifferenceCarousel;
       'feature-highlight.feature-highlight': FeatureHighlightFeatureHighlight;
       'footer.footer': FooterFooter;
       'hero.hero': HeroHero;

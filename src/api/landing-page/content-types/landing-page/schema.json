@@ -25,6 +25,11 @@
       "type": "component",
       "component": "testimonial.testimonial",
       "repeatable": false
+    },
+    "beforeAndAfterDifference": {
+      "type": "component",
+      "component": "before-and-after.before-and-after",
+      "repeatable": false
     }
   }
 }

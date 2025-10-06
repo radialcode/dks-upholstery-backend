@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_before_and_after_before_and_afters",
+  "info": {
+    "displayName": "Before And After"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "differenceSlider": {
+      "type": "component",
+      "component": "difference-carousel.difference-carousel",
+      "repeatable": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "cta.cta",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
