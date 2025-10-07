@@ -238,22 +238,17 @@ export interface HeroHero extends Struct.ComponentSchema {
     displayName: 'hero';
   };
   attributes: {
-    afterImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    > &
-      Schema.Attribute.Required;
-    beforeImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    > &
-      Schema.Attribute.Required;
     cta: Schema.Attribute.Component<'cta.cta', false>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    review: Schema.Attribute.Component<'review-hero.review-hero', false>;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
-    warrantyBadge: Schema.Attribute.Media<
+    heroDesktopImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.Required;
+    heroMobileImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    review: Schema.Attribute.Component<'review-hero.review-hero', false>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -432,7 +427,6 @@ export interface PickServiceCardPickServicesCard
     displayName: 'Pick Services Card';
   };
   attributes: {
-    blog: Schema.Attribute.Relation<'oneToOne', 'api::blog.blog'>;
     cta: Schema.Attribute.Component<'cta.cta', false>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &

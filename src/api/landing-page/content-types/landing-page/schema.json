@@ -55,6 +55,11 @@
       "type": "component",
       "component": "fabrics-and-tips.fabrics-and-tips",
       "repeatable": false
+    },
+    "pickOurService": {
+      "type": "component",
+      "component": "pick-our-services.pick-our-services",
+      "repeatable": false
     }
   }
 }

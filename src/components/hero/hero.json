@@ -23,7 +23,7 @@
       "component": "cta.cta",
       "repeatable": false
     },
-    "beforeImage": {
+    "heroDesktopImage": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -34,21 +34,9 @@
         "audios"
       ]
     },
-    "afterImage": {
+    "heroMobileImage": {
       "type": "media",
       "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "warrantyBadge": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
       "allowedTypes": [
         "images",
         "files",

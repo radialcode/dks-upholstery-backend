@@ -655,6 +655,10 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     ourService: Schema.Attribute.Component<'our-service.our-services', false>;
+    pickOurService: Schema.Attribute.Component<
+      'pick-our-services.pick-our-services',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
     realTransformation: Schema.Attribute.Component<
       'real-transformations.real-transformations',
