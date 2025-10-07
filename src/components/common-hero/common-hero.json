@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_common_hero_common_heroes",
+  "info": {
+    "displayName": "Common Hero"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

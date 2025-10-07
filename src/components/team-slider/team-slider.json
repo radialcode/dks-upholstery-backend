@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_team_slider_team_sliders",
+  "info": {
+    "displayName": "Team Slider"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

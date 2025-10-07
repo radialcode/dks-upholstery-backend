@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "reupholsteries",
+  "info": {
+    "singularName": "reupholstery",
+    "pluralName": "reupholsteries",
+    "displayName": "Reupholstery"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "common-hero.common-hero",
+      "repeatable": false
+    },
+    "furnitureReupholstery": {
+      "type": "component",
+      "component": "furniture-reupholstery.furniture-reupholstery",
+      "repeatable": false
+    },
+    "sofaChairReupholstery": {
+      "type": "component",
+      "component": "sofa-chair-reupholstery.sofa-chair-reupholstery",
+      "repeatable": false
+    }
+  }
+}

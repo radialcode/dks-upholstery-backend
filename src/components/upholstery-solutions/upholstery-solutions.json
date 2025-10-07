@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_fabrics_and_tips_fabrics_and_tips",
+  "collectionName": "components_upholstery_solutions_upholstery_solutions",
   "info": {
-    "displayName": "Fabrics And Tips"
+    "displayName": "Upholstery Solutions"
   },
   "options": {},
   "attributes": {
@@ -13,15 +13,15 @@
       "type": "text",
       "required": true
     },
+    "slider": {
+      "type": "component",
+      "component": "upholstery-solutions-card.upholstery-solutions-card",
+      "repeatable": true
+    },
     "cta": {
       "type": "component",
       "component": "cta.cta",
       "repeatable": false
-    },
-    "blogs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::blog.blog"
     }
   },
   "config": {}

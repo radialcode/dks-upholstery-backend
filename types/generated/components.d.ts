@@ -36,6 +36,57 @@ export interface BeforeAndAfterBeforeAndAfter extends Struct.ComponentSchema {
   };
 }
 
+export interface BlogDetailBlogDetail extends Struct.ComponentSchema {
+  collectionName: 'components_blog_detail_blog_details';
+  info: {
+    displayName: 'Blog Detail';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ChooseUsChooseUs extends Struct.ComponentSchema {
+  collectionName: 'components_choose_us_choose_uses';
+  info: {
+    displayName: 'Choose Us';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    featureHighlight: Schema.Attribute.Component<
+      'feature-highlight.feature-highlight',
+      true
+    >;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CommonHeroCommonHero extends Struct.ComponentSchema {
+  collectionName: 'components_common_hero_common_heroes';
+  info: {
+    displayName: 'Common Hero';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface CostsFabricsTipsCostsFabricsTips
+  extends Struct.ComponentSchema {
+  collectionName: 'components_costs_fabrics_tips_costs_fabrics_tips';
+  info: {
+    displayName: 'costsFabricsTips';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface CtaCta extends Struct.ComponentSchema {
   collectionName: 'components_cta_ctas';
   info: {
@@ -72,12 +123,9 @@ export interface FabricsAndTipsFabricsAndTips extends Struct.ComponentSchema {
     displayName: 'Fabrics And Tips';
   };
   attributes: {
+    blogs: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
     cta: Schema.Attribute.Component<'cta.cta', false>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    tipsList: Schema.Attribute.Component<
-      'pick-service-card.pick-services-card',
-      true
-    >;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -142,6 +190,48 @@ export interface FooterFooter extends Struct.ComponentSchema {
   };
 }
 
+export interface FurnitureCareServiceFurnitureCareService
+  extends Struct.ComponentSchema {
+  collectionName: 'components_furniture_care_service_furniture_care_services';
+  info: {
+    displayName: 'Furniture Care Service';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta.cta', false>;
+    servicesList: Schema.Attribute.Component<
+      'pick-service-card.pick-services-card',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface FurnitureMakeoverFurnitureMakeover
+  extends Struct.ComponentSchema {
+  collectionName: 'components_furniture_makeover_furniture_makeovers';
+  info: {
+    displayName: 'Furniture Makeover';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    socialLinks: Schema.Attribute.Component<'social.socials', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface FurnitureReupholsteryFurnitureReupholstery
+  extends Struct.ComponentSchema {
+  collectionName: 'components_furniture_reupholstery_furniture_reupholsteries';
+  info: {
+    displayName: 'Furniture Reupholstery';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    tabs: Schema.Attribute.Component<'select.select', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface HeroHero extends Struct.ComponentSchema {
   collectionName: 'components_hero_heroes';
   info: {
@@ -164,6 +254,17 @@ export interface HeroHero extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.Required;
+  };
+}
+
+export interface HourofOperationHourOfOperation extends Struct.ComponentSchema {
+  collectionName: 'components_hourof_operation_hour_of_operations';
+  info: {
+    displayName: 'Hour of Operation';
+  };
+  attributes: {
+    infoList: Schema.Attribute.Component<'select.select', true>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -231,6 +332,17 @@ export interface NavBarNavBar extends Struct.ComponentSchema {
   };
 }
 
+export interface NeedHelpNeedHelp extends Struct.ComponentSchema {
+  collectionName: 'components_need_help_need_helps';
+  info: {
+    displayName: 'Need Help';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface OurPromiseOurPromise extends Struct.ComponentSchema {
   collectionName: 'components_our_promise_our_promises';
   info: {
@@ -262,6 +374,41 @@ export interface OurServiceOurServices extends Struct.ComponentSchema {
   };
 }
 
+export interface OurServicesOurService extends Struct.ComponentSchema {
+  collectionName: 'components_our_services_our_services';
+  info: {
+    displayName: 'Our Service';
+  };
+  attributes: {
+    furnitureCareService: Schema.Attribute.Component<
+      'furniture-care-service.furniture-care-service',
+      false
+    >;
+    hero: Schema.Attribute.Component<'common-hero.common-hero', false>;
+    upholsterySolutions: Schema.Attribute.Component<
+      'upholstery-solutions.upholstery-solutions',
+      false
+    >;
+  };
+}
+
+export interface OurStoryOurStory extends Struct.ComponentSchema {
+  collectionName: 'components_our_story_our_stories';
+  info: {
+    displayName: 'Our Story';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta.cta', false>;
+    description: Schema.Attribute.Text;
+    info: Schema.Attribute.Text;
+    leftImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    rightImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface PickOurServicesPickOurServices extends Struct.ComponentSchema {
   collectionName: 'components_pick_our_services_pick_our_services';
   info: {
@@ -285,6 +432,7 @@ export interface PickServiceCardPickServicesCard
     displayName: 'Pick Services Card';
   };
   attributes: {
+    blog: Schema.Attribute.Relation<'oneToOne', 'api::blog.blog'>;
     cta: Schema.Attribute.Component<'cta.cta', false>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
@@ -333,6 +481,17 @@ export interface SelectSelect extends Struct.ComponentSchema {
   };
 }
 
+export interface ServiceListServiceList extends Struct.ComponentSchema {
+  collectionName: 'components_service_list_service_lists';
+  info: {
+    displayName: 'serviceList';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SocialLinksSocialLinks extends Struct.ComponentSchema {
   collectionName: 'components_social_links_social_links';
   info: {
@@ -353,6 +512,42 @@ export interface SocialSocials extends Struct.ComponentSchema {
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
     url: Schema.Attribute.String;
+  };
+}
+
+export interface SofaChairReupholsterySofaChairReupholstery
+  extends Struct.ComponentSchema {
+  collectionName: 'components_sofa_chair_reupholstery_sofa_chair_reupholsteries';
+  info: {
+    displayName: 'Sofa Chair Reupholstery';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    list: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface TeamBehindCraftTeamBehindCraft extends Struct.ComponentSchema {
+  collectionName: 'components_team_behind_craft_team_behind_crafts';
+  info: {
+    displayName: 'Team Behind Craft';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    slider: Schema.Attribute.Component<'team-slider.team-slider', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface TeamSliderTeamSlider extends Struct.ComponentSchema {
+  collectionName: 'components_team_slider_team_sliders';
+  info: {
+    displayName: 'Team Slider';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -417,11 +612,77 @@ export interface TransformationsCardTransformationsCard
   };
 }
 
+export interface TransformationsFocusTransformationsFocus
+  extends Struct.ComponentSchema {
+  collectionName: 'components_transformations_focus_transformations_foci';
+  info: {
+    displayName: 'Transformations Focus';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta.cta', false>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    gallery: Schema.Attribute.Component<
+      'transformations-gallery.transformations-gallery',
+      true
+    >;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface TransformationsGalleryTransformationsGallery
+  extends Struct.ComponentSchema {
+  collectionName: 'components_transformations_gallery_transformations_gallery_s';
+  info: {
+    displayName: 'Transformations Gallery ';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    service_type: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::service-type.service-type'
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface UpholsterySolutionsCardUpholsterySolutionsCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_upholstery_solutions_card_upholstery_solutions_cards';
+  info: {
+    displayName: 'Upholstery Solutions Card';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    titel: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface UpholsterySolutionsUpholsterySolutions
+  extends Struct.ComponentSchema {
+  collectionName: 'components_upholstery_solutions_upholstery_solutions';
+  info: {
+    displayName: 'Upholstery Solutions';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'cta.cta', false>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    slider: Schema.Attribute.Component<
+      'upholstery-solutions-card.upholstery-solutions-card',
+      true
+    >;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'about-us.about-us': AboutUsAboutUs;
       'before-and-after.before-and-after': BeforeAndAfterBeforeAndAfter;
+      'blog-detail.blog-detail': BlogDetailBlogDetail;
+      'choose-us.choose-us': ChooseUsChooseUs;
+      'common-hero.common-hero': CommonHeroCommonHero;
+      'costs-fabrics-tips.costs-fabrics-tips': CostsFabricsTipsCostsFabricsTips;
       'cta.cta': CtaCta;
       'difference-carousel.difference-carousel': DifferenceCarouselDifferenceCarousel;
       'fabrics-and-tips.fabrics-and-tips': FabricsAndTipsFabricsAndTips;
@@ -429,24 +690,39 @@ declare module '@strapi/strapi' {
       'faq.faqs': FaqFaqs;
       'feature-highlight.feature-highlight': FeatureHighlightFeatureHighlight;
       'footer.footer': FooterFooter;
+      'furniture-care-service.furniture-care-service': FurnitureCareServiceFurnitureCareService;
+      'furniture-makeover.furniture-makeover': FurnitureMakeoverFurnitureMakeover;
+      'furniture-reupholstery.furniture-reupholstery': FurnitureReupholsteryFurnitureReupholstery;
       'hero.hero': HeroHero;
+      'hourof-operation.hour-of-operation': HourofOperationHourOfOperation;
       'how-it-work-card.how-it-work-card': HowItWorkCardHowItWorkCard;
       'how-it-works.how-it-works': HowItWorksHowItWorks;
       'icons-list.icons-list': IconsListIconsList;
       'list.list': ListList;
       'nav-bar.nav-bar': NavBarNavBar;
+      'need-help.need-help': NeedHelpNeedHelp;
       'our-promise.our-promise': OurPromiseOurPromise;
       'our-service.our-services': OurServiceOurServices;
+      'our-services.our-service': OurServicesOurService;
+      'our-story.our-story': OurStoryOurStory;
       'pick-our-services.pick-our-services': PickOurServicesPickOurServices;
       'pick-service-card.pick-services-card': PickServiceCardPickServicesCard;
       'real-transformations.real-transformations': RealTransformationsRealTransformations;
       'review-hero.review-hero': ReviewHeroReviewHero;
       'select.select': SelectSelect;
+      'service-list.service-list': ServiceListServiceList;
       'social-links.social-links': SocialLinksSocialLinks;
       'social.socials': SocialSocials;
+      'sofa-chair-reupholstery.sofa-chair-reupholstery': SofaChairReupholsterySofaChairReupholstery;
+      'team-behind-craft.team-behind-craft': TeamBehindCraftTeamBehindCraft;
+      'team-slider.team-slider': TeamSliderTeamSlider;
       'testimonial-card.testimonial-card': TestimonialCardTestimonialCard;
       'testimonial.testimonial': TestimonialTestimonial;
       'transformations-card.transformations-card': TransformationsCardTransformationsCard;
+      'transformations-focus.transformations-focus': TransformationsFocusTransformationsFocus;
+      'transformations-gallery.transformations-gallery': TransformationsGalleryTransformationsGallery;
+      'upholstery-solutions-card.upholstery-solutions-card': UpholsterySolutionsCardUpholsterySolutionsCard;
+      'upholstery-solutions.upholstery-solutions': UpholsterySolutionsUpholsterySolutions;
     }
   }
 }

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_need_help_need_helps",
+  "info": {
+    "displayName": "Need Help"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

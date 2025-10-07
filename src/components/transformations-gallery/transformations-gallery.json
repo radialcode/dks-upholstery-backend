@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_transformations_gallery_transformations_gallery_s",
+  "info": {
+    "displayName": "Transformations Gallery "
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "service_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::service-type.service-type"
+    }
+  },
+  "config": {}
+}
