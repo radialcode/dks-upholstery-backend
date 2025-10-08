@@ -33,11 +33,6 @@
         "audios"
       ]
     },
-    "serviceCategories": {
-      "type": "component",
-      "component": "select.select",
-      "repeatable": true
-    },
     "socials": {
       "type": "component",
       "component": "social.socials",

@@ -124,7 +124,6 @@ export interface FabricsAndTipsFabricsAndTips extends Struct.ComponentSchema {
   };
   attributes: {
     blogs: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
-    cta: Schema.Attribute.Component<'cta.cta', false>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -180,7 +179,6 @@ export interface FooterFooter extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    serviceCategories: Schema.Attribute.Component<'select.select', true>;
     socialLogo: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
@@ -346,7 +344,7 @@ export interface OurPromiseOurPromise extends Struct.ComponentSchema {
   attributes: {
     cta: Schema.Attribute.Component<'cta.cta', false>;
     description: Schema.Attribute.Text;
-    Title: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -361,7 +359,7 @@ export interface OurServiceOurServices extends Struct.ComponentSchema {
       true
     >;
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    TrustedCompany: Schema.Attribute.Media<
+    trustedCompany: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     > &
@@ -427,7 +425,6 @@ export interface PickServiceCardPickServicesCard
     displayName: 'Pick Services Card';
   };
   attributes: {
-    cta: Schema.Attribute.Component<'cta.cta', false>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;

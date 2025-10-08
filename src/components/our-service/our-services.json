@@ -9,7 +9,7 @@
       "type": "string",
       "required": true
     },
-    "TrustedCompany": {
+    "trustedCompany": {
       "type": "media",
       "multiple": true,
       "required": true,

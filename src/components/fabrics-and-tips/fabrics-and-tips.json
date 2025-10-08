@@ -13,11 +13,6 @@
       "type": "text",
       "required": true
     },
-    "cta": {
-      "type": "component",
-      "component": "cta.cta",
-      "repeatable": false
-    },
     "blogs": {
       "type": "relation",
       "relation": "oneToMany",

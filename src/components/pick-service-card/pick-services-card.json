@@ -23,11 +23,6 @@
     "description": {
       "type": "text",
       "required": true
-    },
-    "cta": {
-      "type": "component",
-      "component": "cta.cta",
-      "repeatable": false
     }
   },
   "config": {}
