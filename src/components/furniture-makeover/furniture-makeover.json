@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_furniture_makeover_furniture_makeovers",
+  "info": {
+    "displayName": "Furniture Makeover"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "socialLinks": {
+      "type": "component",
+      "component": "social.socials",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

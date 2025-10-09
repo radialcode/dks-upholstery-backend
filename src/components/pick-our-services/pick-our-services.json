@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_pick_our_services_pick_our_services",
+  "info": {
+    "displayName": "Pick Our Services"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "slider": {
+      "type": "component",
+      "component": "pick-service-card.pick-services-card",
+      "repeatable": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "cta.cta",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

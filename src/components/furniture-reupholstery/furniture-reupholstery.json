@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_furniture_reupholstery_furniture_reupholsteries",
+  "info": {
+    "displayName": "Furniture Reupholstery"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "tabs": {
+      "type": "component",
+      "component": "select.select",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

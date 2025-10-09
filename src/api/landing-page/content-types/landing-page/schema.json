@@ -30,6 +30,36 @@
       "type": "component",
       "component": "before-and-after.before-and-after",
       "repeatable": false
+    },
+    "realTransformation": {
+      "type": "component",
+      "component": "real-transformations.real-transformations",
+      "repeatable": false
+    },
+    "aboutUs": {
+      "type": "component",
+      "component": "about-us.about-us",
+      "repeatable": false
+    },
+    "howItWorks": {
+      "type": "component",
+      "component": "how-it-works.how-it-works",
+      "repeatable": false
+    },
+    "faqs": {
+      "type": "component",
+      "component": "faq.faqs",
+      "repeatable": false
+    },
+    "fabricsAndTips": {
+      "type": "component",
+      "component": "fabrics-and-tips.fabrics-and-tips",
+      "repeatable": false
+    },
+    "pickOurService": {
+      "type": "component",
+      "component": "pick-our-services.pick-our-services",
+      "repeatable": false
     }
   }
 }

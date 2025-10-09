@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_hourof_operation_hour_of_operations",
+  "info": {
+    "displayName": "Hour of Operation"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "infoList": {
+      "type": "component",
+      "component": "select.select",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

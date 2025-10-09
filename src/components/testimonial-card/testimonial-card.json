@@ -34,6 +34,11 @@
       "minLength": 1,
       "maxLength": 5,
       "required": true
+    },
+    "social_icon": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::social-icon.social-icon"
     }
   },
   "config": {}

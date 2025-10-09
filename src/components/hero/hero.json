@@ -15,16 +15,18 @@
       "repeatable": false
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "cta": {
       "type": "component",
       "component": "cta.cta",
       "repeatable": false
     },
-    "beforeImage": {
+    "heroDesktopImage": {
       "type": "media",
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -32,17 +34,7 @@
         "audios"
       ]
     },
-    "afterImage": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "warrantyBadge": {
+    "heroMobileImage": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [

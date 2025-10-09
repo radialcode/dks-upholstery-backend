@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_fabrics_and_tips_fabrics_and_tips",
+  "info": {
+    "displayName": "Fabrics And Tips"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_transformations_focus_transformations_foci",
+  "info": {
+    "displayName": "Transformations Focus"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "gallery": {
+      "type": "component",
+      "component": "transformations-gallery.transformations-gallery",
+      "repeatable": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "cta.cta",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

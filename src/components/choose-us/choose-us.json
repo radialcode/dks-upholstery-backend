@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_choose_us_choose_uses",
+  "info": {
+    "displayName": "Choose Us"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "featureHighlight": {
+      "type": "component",
+      "component": "feature-highlight.feature-highlight",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

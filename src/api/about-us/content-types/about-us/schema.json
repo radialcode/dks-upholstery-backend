@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "About Us"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "common-hero.common-hero",
+      "repeatable": false
+    },
+    "ourStory": {
+      "type": "component",
+      "component": "our-story.our-story",
+      "repeatable": false
+    },
+    "teamBehindCraft": {
+      "type": "component",
+      "component": "team-behind-craft.team-behind-craft",
+      "repeatable": false
+    },
+    "chooseUs": {
+      "type": "component",
+      "component": "choose-us.choose-us",
+      "repeatable": false
+    }
+  }
+}

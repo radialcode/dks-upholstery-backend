@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_costs_fabrics_tips_costs_fabrics_tips",
+  "info": {
+    "displayName": "costsFabricsTips"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
