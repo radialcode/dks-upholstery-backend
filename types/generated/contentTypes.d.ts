@@ -464,6 +464,34 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiBlogPageBlogPage extends Struct.SingleTypeSchema {
+  collectionName: 'blog_pages';
+  info: {
+    displayName: 'Blog Page';
+    pluralName: 'blog-pages';
+    singularName: 'blog-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common-hero.common-hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-page.blog-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   collectionName: 'blogs';
   info: {
@@ -543,7 +571,6 @@ export interface ApiFaqFaq extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    cta: Schema.Attribute.Component<'cta.cta', false>;
     hero: Schema.Attribute.Component<'common-hero.common-hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::faq.faq'> &
@@ -602,6 +629,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    faqs: Schema.Attribute.Component<'faq.faqs', false>;
     footer: Schema.Attribute.Component<'footer.footer', false>;
     furnitureMakeover: Schema.Attribute.Component<
       'furniture-makeover.furniture-makeover',
@@ -645,7 +673,6 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
       'fabrics-and-tips.fabrics-and-tips',
       false
     >;
-    faqs: Schema.Attribute.Component<'faq.faqs', false>;
     hero: Schema.Attribute.Component<'hero.hero', false>;
     howItWorks: Schema.Attribute.Component<'how-it-works.how-it-works', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -699,7 +726,7 @@ export interface ApiReupholsteryReupholstery extends Struct.SingleTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     sofaChairReupholstery: Schema.Attribute.Component<
       'sofa-chair-reupholstery.sofa-chair-reupholstery',
-      false
+      true
     >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1342,6 +1369,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::blog-page.blog-page': ApiBlogPageBlogPage;
       'api::blog.blog': ApiBlogBlog;
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::faq.faq': ApiFaqFaq;

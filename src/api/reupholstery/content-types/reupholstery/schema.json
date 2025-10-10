@@ -24,7 +24,7 @@
     "sofaChairReupholstery": {
       "type": "component",
       "component": "sofa-chair-reupholstery.sofa-chair-reupholstery",
-      "repeatable": false
+      "repeatable": true
     }
   }
 }

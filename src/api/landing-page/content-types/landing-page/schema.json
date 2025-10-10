@@ -46,11 +46,6 @@
       "component": "how-it-works.how-it-works",
       "repeatable": false
     },
-    "faqs": {
-      "type": "component",
-      "component": "faq.faqs",
-      "repeatable": false
-    },
     "fabricsAndTips": {
       "type": "component",
       "component": "fabrics-and-tips.fabrics-and-tips",
