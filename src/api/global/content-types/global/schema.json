@@ -30,6 +30,11 @@
       "type": "component",
       "component": "furniture-makeover.furniture-makeover",
       "repeatable": false
+    },
+    "faqs": {
+      "type": "component",
+      "component": "faq.faqs",
+      "repeatable": false
     }
   }
 }

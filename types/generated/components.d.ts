@@ -514,6 +514,8 @@ export interface SofaChairReupholsterySofaChairReupholstery
   };
   attributes: {
     description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    key: Schema.Attribute.String;
     list: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
   };
@@ -644,7 +646,7 @@ export interface UpholsterySolutionsCardUpholsterySolutionsCard
   };
   attributes: {
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    titel: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 

@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "faqs",
+  "collectionName": "blog_pages",
   "info": {
-    "singularName": "faq",
-    "pluralName": "faqs",
-    "displayName": "Faq"
+    "singularName": "blog-page",
+    "pluralName": "blog-pages",
+    "displayName": "Blog Page"
   },
   "options": {
     "draftAndPublish": true
@@ -14,11 +14,6 @@
     "hero": {
       "type": "component",
       "component": "common-hero.common-hero",
-      "repeatable": false
-    },
-    "needHelp": {
-      "type": "component",
-      "component": "need-help.need-help",
       "repeatable": false
     }
   }
