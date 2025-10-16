@@ -23,7 +23,14 @@
       "required": true
     },
     "email": {
-      "type": "email"
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "message": {
+      "type": "text",
+      "minLength": 10,
+      "required": true
     }
   }
 }
