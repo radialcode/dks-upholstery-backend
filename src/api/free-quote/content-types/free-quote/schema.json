@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "free_quotes",
+  "info": {
+    "singularName": "free-quote",
+    "pluralName": "free-quotes",
+    "displayName": "Free Quote"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "contactNumber": {
+      "type": "integer",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
