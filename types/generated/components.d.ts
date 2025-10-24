@@ -467,6 +467,7 @@ export interface SelectSelect extends Struct.ComponentSchema {
     displayName: 'select';
   };
   attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     value: Schema.Attribute.String & Schema.Attribute.Required;
   };
