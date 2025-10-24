@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sofa_chair_reupholstery_sofa_chair_reupholsteries",
+  "info": {
+    "displayName": "Sofa Chair Reupholstery"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "list": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

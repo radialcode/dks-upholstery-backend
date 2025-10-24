@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_upholstery_solutions_card_upholstery_solutions_cards",
+  "info": {
+    "displayName": "Upholstery Solutions Card"
+  },
+  "options": {},
+  "attributes": {
+    "titel": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

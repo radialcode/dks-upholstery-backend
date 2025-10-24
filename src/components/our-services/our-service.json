@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_our_services_our_services",
+  "info": {
+    "displayName": "Our Service"
+  },
+  "options": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "common-hero.common-hero",
+      "repeatable": false
+    },
+    "upholsterySolutions": {
+      "type": "component",
+      "component": "upholstery-solutions.upholstery-solutions",
+      "repeatable": false
+    },
+    "furnitureCareService": {
+      "type": "component",
+      "component": "furniture-care-service.furniture-care-service",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

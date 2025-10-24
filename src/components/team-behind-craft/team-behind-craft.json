@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_team_behind_craft_team_behind_crafts",
+  "info": {
+    "displayName": "Team Behind Craft"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "slider": {
+      "type": "component",
+      "component": "team-slider.team-slider",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

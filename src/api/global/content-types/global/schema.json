@@ -4,7 +4,7 @@
   "info": {
     "singularName": "global",
     "pluralName": "globals",
-    "displayName": "global"
+    "displayName": "Global"
   },
   "options": {
     "draftAndPublish": true
@@ -24,6 +24,11 @@
     "ourPromise": {
       "type": "component",
       "component": "our-promise.our-promise",
+      "repeatable": false
+    },
+    "furnitureMakeover": {
+      "type": "component",
+      "component": "furniture-makeover.furniture-makeover",
       "repeatable": false
     }
   }

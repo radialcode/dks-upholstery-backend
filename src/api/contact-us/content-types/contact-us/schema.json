@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_uses",
+  "info": {
+    "singularName": "contact-us",
+    "pluralName": "contact-uses",
+    "displayName": "Contact Us"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "common-hero.common-hero",
+      "repeatable": false
+    },
+    "hourofOperation": {
+      "type": "component",
+      "component": "hourof-operation.hour-of-operation",
+      "repeatable": false
+    },
+    "cta": {
+      "type": "component",
+      "component": "cta.cta",
+      "repeatable": false
+    }
+  }
+}

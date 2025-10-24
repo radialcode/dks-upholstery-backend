@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "galleries",
+  "info": {
+    "singularName": "gallery",
+    "pluralName": "galleries",
+    "displayName": "Gallery"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "component",
+      "component": "common-hero.common-hero",
+      "repeatable": false
+    },
+    "transformationsFocus": {
+      "type": "component",
+      "component": "transformations-focus.transformations-focus",
+      "repeatable": false
+    }
+  }
+}

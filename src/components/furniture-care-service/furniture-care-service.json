@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_furniture_care_service_furniture_care_services",
+  "info": {
+    "displayName": "Furniture Care Service"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "servicesList": {
+      "type": "component",
+      "component": "pick-service-card.pick-services-card",
+      "repeatable": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "cta.cta",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

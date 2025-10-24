@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_upholstery_solutions_upholstery_solutions",
+  "info": {
+    "displayName": "Upholstery Solutions"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "slider": {
+      "type": "component",
+      "component": "upholstery-solutions-card.upholstery-solutions-card",
+      "repeatable": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "cta.cta",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

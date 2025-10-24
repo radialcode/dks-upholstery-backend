@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_transformations_card_transformations_cards",
+  "info": {
+    "displayName": "Transformations Card"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "quote": {
+      "type": "text",
+      "required": true
+    },
+    "authorName": {
+      "type": "string",
+      "required": true
+    },
+    "social_icon": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::social-icon.social-icon"
+    }
+  },
+  "config": {}
+}

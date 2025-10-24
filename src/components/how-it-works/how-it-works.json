@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_how_it_works_how_it_works",
+  "info": {
+    "displayName": "How It Works"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "steps": {
+      "type": "component",
+      "component": "how-it-work-card.how-it-work-card",
+      "repeatable": true
+    },
+    "cta": {
+      "type": "component",
+      "component": "cta.cta",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
