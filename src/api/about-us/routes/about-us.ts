@@ -1,6 +1,5 @@
 /**
- * about-us router
- */
+ * about-us router */
 
 import { factories } from '@strapi/strapi';
 
