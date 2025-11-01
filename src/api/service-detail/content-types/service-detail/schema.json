@@ -33,7 +33,7 @@
         }
       },
       "component": "sofa-chair-reupholstery.sofa-chair-reupholstery",
-      "repeatable": false
+      "repeatable": true
     },
     "title": {
       "type": "string",

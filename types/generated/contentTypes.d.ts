@@ -899,7 +899,7 @@ export interface ApiServiceDetailServiceDetail
     publishedAt: Schema.Attribute.DateTime;
     serviceDetail: Schema.Attribute.Component<
       'sofa-chair-reupholstery.sofa-chair-reupholstery',
-      false
+      true
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
