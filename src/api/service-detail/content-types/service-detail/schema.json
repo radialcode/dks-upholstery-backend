@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_details",
+  "info": {
+    "singularName": "service-detail",
+    "pluralName": "service-details",
+    "displayName": "Service Detail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "furnitureReupholstery": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "furniture-reupholstery.furniture-reupholstery",
+      "repeatable": false
+    },
+    "serviceDetail": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "sofa-chair-reupholstery.sofa-chair-reupholstery",
+      "repeatable": false
+    },
+    "title": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "slug": {
+      "type": "uid",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "targetField": "title",
+      "required": true
+    }
+  }
+}

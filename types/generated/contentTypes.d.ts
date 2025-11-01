@@ -856,6 +856,77 @@ export interface ApiReupholsteryReupholstery extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiServiceDetailServiceDetail
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'service_details';
+  info: {
+    displayName: 'Service Detail';
+    pluralName: 'service-details';
+    singularName: 'service-detail';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    furnitureReupholstery: Schema.Attribute.Component<
+      'furniture-reupholstery.furniture-reupholstery',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::service-detail.service-detail'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    serviceDetail: Schema.Attribute.Component<
+      'sofa-chair-reupholstery.sofa-chair-reupholstery',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Schema.Attribute.UID<'title'> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServiceTypeServiceType extends Struct.CollectionTypeSchema {
   collectionName: 'service_types';
   info: {
@@ -1502,6 +1573,7 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::reupholstery.reupholstery': ApiReupholsteryReupholstery;
+      'api::service-detail.service-detail': ApiServiceDetailServiceDetail;
       'api::service-type.service-type': ApiServiceTypeServiceType;
       'api::service.service': ApiServiceService;
       'api::social-icon.social-icon': ApiSocialIconSocialIcon;
