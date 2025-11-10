@@ -38,6 +38,14 @@
       "type": "component",
       "component": "cta.cta",
       "repeatable": false
+    },
+    "leftImageAlt": {
+      "type": "string",
+      "required": true
+    },
+    "rightImageAlt": {
+      "type": "string",
+      "required": true
     }
   },
   "config": {}

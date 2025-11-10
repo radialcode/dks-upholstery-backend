@@ -25,6 +25,10 @@
       "type": "component",
       "component": "feature-highlight.feature-highlight",
       "repeatable": true
+    },
+    "alt": {
+      "type": "string",
+      "required": true
     }
   },
   "config": {}

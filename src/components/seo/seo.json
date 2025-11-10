@@ -1,29 +1,28 @@
 {
-  "collectionName": "components_feature_highlight_feature_highlights",
+  "collectionName": "components_seo_seos",
   "info": {
-    "displayName": "Feature Highlight"
+    "displayName": "seo"
   },
   "options": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "string"
+      "type": "text",
+      "required": true
     },
-    "icon": {
+    "image": {
       "type": "media",
       "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ]
-    },
-    "alt": {
-      "type": "string",
-      "required": true
     }
   },
   "config": {}

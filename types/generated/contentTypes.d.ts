@@ -454,6 +454,7 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     ourStory: Schema.Attribute.Component<'our-story.our-story', false>;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
     teamBehindCraft: Schema.Attribute.Component<
       'team-behind-craft.team-behind-craft',
       false
@@ -486,6 +487,8 @@ export interface ApiBlogPageBlogPage extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -513,6 +516,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
     thumbnailImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
@@ -551,6 +555,8 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -623,6 +629,7 @@ export interface ApiFaqFaq extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     needHelp: Schema.Attribute.Component<'need-help.need-help', false>;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -727,6 +734,8 @@ export interface ApiGalleryGallery extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.Required;
     transformationsFocus: Schema.Attribute.Component<
       'transformations-focus.transformations-focus',
       false
@@ -813,6 +822,8 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
       'real-transformations.real-transformations',
       false
     >;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.Required;
     testimonials: Schema.Attribute.Component<'testimonial.testimonial', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -983,6 +994,7 @@ export interface ApiServiceService extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     ourServices: Schema.Attribute.Component<'our-services.our-service', false>;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1043,6 +1055,8 @@ export interface ApiTermsOfServiceTermsOfService
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.Required;
     servicesList: Schema.Attribute.Component<'service-list.service-list', true>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

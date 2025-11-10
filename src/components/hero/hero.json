@@ -43,6 +43,10 @@
         "videos",
         "audios"
       ]
+    },
+    "heroAlt": {
+      "type": "string",
+      "required": true
     }
   },
   "config": {}

@@ -22,6 +22,10 @@
         "videos",
         "audios"
       ]
+    },
+    "alt": {
+      "type": "string",
+      "required": true
     }
   },
   "config": {}

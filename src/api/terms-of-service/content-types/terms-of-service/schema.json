@@ -27,6 +27,12 @@
       "type": "component",
       "component": "service-list.service-list",
       "repeatable": true
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false,
+      "required": true
     }
   }
 }
