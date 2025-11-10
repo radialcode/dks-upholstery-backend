@@ -20,6 +20,12 @@
       "type": "component",
       "component": "transformations-focus.transformations-focus",
       "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false,
+      "required": true
     }
   }
 }

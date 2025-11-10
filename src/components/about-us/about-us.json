@@ -40,6 +40,14 @@
         "videos",
         "audios"
       ]
+    },
+    "leftSliderAlt": {
+      "type": "string",
+      "required": true
+    },
+    "rightSliderAlt": {
+      "type": "string",
+      "required": true
     }
   },
   "config": {}

@@ -26,6 +26,12 @@
         "videos",
         "audios"
       ]
+    },
+    "afterImageAlt": {
+      "type": "string"
+    },
+    "beforeImageAlt": {
+      "type": "string"
     }
   },
   "config": {}

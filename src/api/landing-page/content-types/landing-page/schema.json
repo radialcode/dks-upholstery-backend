@@ -55,6 +55,12 @@
       "type": "component",
       "component": "pick-our-services.pick-our-services",
       "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false,
+      "required": true
     }
   }
 }

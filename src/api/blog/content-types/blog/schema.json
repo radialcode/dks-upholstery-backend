@@ -35,6 +35,11 @@
       "component": "blog-detail.blog-detail",
       "repeatable": true,
       "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
     }
   }
 }

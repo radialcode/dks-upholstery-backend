@@ -25,6 +25,12 @@
       "type": "component",
       "component": "cta.cta",
       "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false,
+      "required": true
     }
   }
 }

@@ -20,6 +20,11 @@
       "type": "component",
       "component": "need-help.need-help",
       "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
     }
   }
 }
