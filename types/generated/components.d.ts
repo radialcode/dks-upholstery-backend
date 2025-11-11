@@ -12,12 +12,10 @@ export interface AboutUsAboutUs extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.Required;
-    leftSliderAlt: Schema.Attribute.String & Schema.Attribute.Required;
     rightSideImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.Required;
-    rightSliderAlt: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -56,7 +54,6 @@ export interface ChooseUsChooseUs extends Struct.ComponentSchema {
     displayName: 'Choose Us';
   };
   attributes: {
-    alt: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.Text;
     featureHighlight: Schema.Attribute.Component<
       'feature-highlight.feature-highlight',
@@ -96,7 +93,6 @@ export interface CtaCta extends Struct.ComponentSchema {
     displayName: 'Cta';
   };
   attributes: {
-    alt: Schema.Attribute.String & Schema.Attribute.Required;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     url: Schema.Attribute.String;
@@ -114,12 +110,10 @@ export interface DifferenceCarouselDifferenceCarousel
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.Required;
-    afterImageAlt: Schema.Attribute.String;
     beforeImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.Required;
-    beforeImageAlt: Schema.Attribute.String;
   };
 }
 
@@ -165,7 +159,6 @@ export interface FeatureHighlightFeatureHighlight
     displayName: 'Feature Highlight';
   };
   attributes: {
-    alt: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.String;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
@@ -245,7 +238,6 @@ export interface HeroHero extends Struct.ComponentSchema {
   attributes: {
     cta: Schema.Attribute.Component<'cta.cta', false>;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    heroAlt: Schema.Attribute.String & Schema.Attribute.Required;
     heroDesktopImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
@@ -275,7 +267,6 @@ export interface HowItWorkCardHowItWorkCard extends Struct.ComponentSchema {
     displayName: 'How It Work Card';
   };
   attributes: {
-    alt: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
@@ -404,11 +395,9 @@ export interface OurStoryOurStory extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     info: Schema.Attribute.Text;
     leftImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    leftImageAlt: Schema.Attribute.String & Schema.Attribute.Required;
     rightImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    rightImageAlt: Schema.Attribute.String & Schema.Attribute.Required;
     title: Schema.Attribute.String;
   };
 }
@@ -436,7 +425,6 @@ export interface PickServiceCardPickServicesCard
     displayName: 'Pick Services Card';
   };
   attributes: {
-    alt: Schema.Attribute.String & Schema.Attribute.Required;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
@@ -466,7 +454,6 @@ export interface ReviewHeroReviewHero extends Struct.ComponentSchema {
     displayName: 'Review Hero';
   };
   attributes: {
-    alt: Schema.Attribute.String & Schema.Attribute.Required;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
     rating: Schema.Attribute.String & Schema.Attribute.Required;
@@ -480,7 +467,6 @@ export interface SelectSelect extends Struct.ComponentSchema {
     displayName: 'select';
   };
   attributes: {
-    alt: Schema.Attribute.String & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     value: Schema.Attribute.String & Schema.Attribute.Required;
@@ -567,7 +553,6 @@ export interface TeamSliderTeamSlider extends Struct.ComponentSchema {
     displayName: 'Team Slider';
   };
   attributes: {
-    alt: Schema.Attribute.String & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
@@ -584,7 +569,6 @@ export interface TestimonialCardTestimonialCard extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.Required;
-    profileImageAlt: Schema.Attribute.String & Schema.Attribute.Required;
     quote: Schema.Attribute.Text & Schema.Attribute.Required;
     rating: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -623,7 +607,6 @@ export interface TransformationsCardTransformationsCard
     displayName: 'Transformations Card';
   };
   attributes: {
-    alt: Schema.Attribute.String & Schema.Attribute.Required;
     authorName: Schema.Attribute.String & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Schema.Attribute.Required;
