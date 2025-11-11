@@ -908,6 +908,13 @@ export interface ApiServiceDetailServiceDetail
       'api::service-detail.service-detail'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     serviceDetail: Schema.Attribute.Component<
       'sofa-chair-reupholstery.sofa-chair-reupholstery',
       true

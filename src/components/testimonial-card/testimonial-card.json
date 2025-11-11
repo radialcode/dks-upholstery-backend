@@ -39,10 +39,6 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::social-icon.social-icon"
-    },
-    "profileImageAlt": {
-      "type": "string",
-      "required": true
     }
   },
   "config": {}

@@ -23,10 +23,6 @@
     "rating": {
       "type": "string",
       "required": true
-    },
-    "alt": {
-      "type": "string",
-      "required": true
     }
   },
   "config": {}
