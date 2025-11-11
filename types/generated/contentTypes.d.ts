@@ -831,42 +831,6 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiReupholsteryReupholstery extends Struct.SingleTypeSchema {
-  collectionName: 'reupholsteries';
-  info: {
-    displayName: 'Reupholstery';
-    pluralName: 'reupholsteries';
-    singularName: 'reupholstery';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    furnitureReupholstery: Schema.Attribute.Component<
-      'furniture-reupholstery.furniture-reupholstery',
-      false
-    >;
-    hero: Schema.Attribute.Component<'common-hero.common-hero', false>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::reupholstery.reupholstery'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    sofaChairReupholstery: Schema.Attribute.Component<
-      'sofa-chair-reupholstery.sofa-chair-reupholstery',
-      true
-    >;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiServiceDetailServiceDetail
   extends Struct.CollectionTypeSchema {
   collectionName: 'service_details';
@@ -1593,7 +1557,6 @@ declare module '@strapi/strapi' {
       'api::gallery.gallery': ApiGalleryGallery;
       'api::global.global': ApiGlobalGlobal;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
-      'api::reupholstery.reupholstery': ApiReupholsteryReupholstery;
       'api::service-detail.service-detail': ApiServiceDetailServiceDetail;
       'api::service-type.service-type': ApiServiceTypeServiceType;
       'api::service.service': ApiServiceService;
