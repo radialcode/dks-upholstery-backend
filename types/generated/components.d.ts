@@ -528,7 +528,10 @@ export interface SofaChairReupholsterySofaChairReupholstery
   };
   attributes: {
     description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     key: Schema.Attribute.String;
     list: Schema.Attribute.Blocks;
     title: Schema.Attribute.String;
