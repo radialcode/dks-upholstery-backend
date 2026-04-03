@@ -647,10 +647,19 @@ export interface ApiFreeQuoteFreeQuote extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    contactNumber: Schema.Attribute.Integer & Schema.Attribute.Required;
+    contactNumber: Schema.Attribute.BigInteger &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: '15';
+          min: '8';
+        },
+        string
+      >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
     fullName: Schema.Attribute.String & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -659,52 +668,7 @@ export interface ApiFreeQuoteFreeQuote extends Struct.CollectionTypeSchema {
       'api::free-quote.free-quote'
     > &
       Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiFurnitureMakeoverFurnitureMakeover
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'furniture_makeovers';
-  info: {
-    displayName: 'Furniture Makeover';
-    pluralName: 'furniture-makeovers';
-    singularName: 'furniture-makeover';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    contactNumber: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 15;
-        minLength: 9;
-      }>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    email: Schema.Attribute.Email & Schema.Attribute.Required;
-    fullName: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        minLength: 3;
-      }>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::furniture-makeover.furniture-makeover'
-    > &
-      Schema.Attribute.Private;
-    media: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    > &
-      Schema.Attribute.Required;
-    message: Schema.Attribute.Text & Schema.Attribute.Required;
+    message: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1553,7 +1517,6 @@ declare module '@strapi/strapi' {
       'api::contact.contact': ApiContactContact;
       'api::faq.faq': ApiFaqFaq;
       'api::free-quote.free-quote': ApiFreeQuoteFreeQuote;
-      'api::furniture-makeover.furniture-makeover': ApiFurnitureMakeoverFurnitureMakeover;
       'api::gallery.gallery': ApiGalleryGallery;
       'api::global.global': ApiGlobalGlobal;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;

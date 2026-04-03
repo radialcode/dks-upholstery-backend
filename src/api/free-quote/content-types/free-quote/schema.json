@@ -16,8 +16,10 @@
       "required": true
     },
     "contactNumber": {
-      "type": "integer",
-      "required": true
+      "type": "biginteger",
+      "required": true,
+      "min": "8",
+      "max": "15"
     },
     "image": {
       "type": "media",
@@ -28,6 +30,13 @@
         "videos",
         "audios"
       ]
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "message": {
+      "type": "text"
     }
   }
 }
