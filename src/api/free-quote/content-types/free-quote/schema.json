@@ -28,6 +28,13 @@
         "videos",
         "audios"
       ]
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "message": {
+      "type": "text"
     }
   }
 }

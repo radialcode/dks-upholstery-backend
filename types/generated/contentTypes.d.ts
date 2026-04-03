@@ -651,6 +651,7 @@ export interface ApiFreeQuoteFreeQuote extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
     fullName: Schema.Attribute.String & Schema.Attribute.Required;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -659,6 +660,7 @@ export interface ApiFreeQuoteFreeQuote extends Struct.CollectionTypeSchema {
       'api::free-quote.free-quote'
     > &
       Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -682,7 +684,7 @@ export interface ApiFurnitureMakeoverFurnitureMakeover
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 15;
-        minLength: 9;
+        minLength: 8;
       }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
