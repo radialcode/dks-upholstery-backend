@@ -647,7 +647,15 @@ export interface ApiFreeQuoteFreeQuote extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    contactNumber: Schema.Attribute.Integer & Schema.Attribute.Required;
+    contactNumber: Schema.Attribute.BigInteger &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: '15';
+          min: '8';
+        },
+        string
+      >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
