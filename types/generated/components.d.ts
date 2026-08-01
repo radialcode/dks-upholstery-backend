@@ -473,6 +473,16 @@ export interface SelectSelect extends Struct.ComponentSchema {
   };
 }
 
+export interface SeoKeyword extends Struct.ComponentSchema {
+  collectionName: 'components_seo_keywords';
+  info: {
+    displayName: 'Keyword';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SeoSeo extends Struct.ComponentSchema {
   collectionName: 'components_seo_seos';
   info: {
@@ -720,6 +730,7 @@ declare module '@strapi/strapi' {
       'real-transformations.real-transformations': RealTransformationsRealTransformations;
       'review-hero.review-hero': ReviewHeroReviewHero;
       'select.select': SelectSelect;
+      'seo.keyword': SeoKeyword;
       'seo.seo': SeoSeo;
       'service-list.service-list': ServiceListServiceList;
       'social-links.social-links': SocialLinksSocialLinks;
