@@ -40,6 +40,11 @@
       "type": "uid",
       "targetField": "title",
       "required": true
+    },
+    "keywords": {
+      "type": "component",
+      "component": "seo.keyword",
+      "repeatable": true
     }
   }
 }
