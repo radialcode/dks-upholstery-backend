@@ -45,6 +45,11 @@
       "type": "component",
       "component": "seo.keyword",
       "repeatable": true
+    },
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
     }
   }
 }
